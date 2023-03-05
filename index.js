@@ -14,9 +14,10 @@ db.once('open', () => {
 
 
 
+app.use(express.json())
+
 
 app.use('/', router)
-app.use(express.json())
 app.listen(3000, () => {
     console.log('app is runing on port 3000')
 })
